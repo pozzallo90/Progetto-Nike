@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NuoviArriviService } from '../../services /nuovi.arrivi.service';
+import { NuoviArriviService } from '../../services/nuovi.arrivi.service';
 import { Prodotto } from '../../models/prodotto';
 
 @Component({
