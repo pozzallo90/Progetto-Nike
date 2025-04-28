@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NuoviArriviService } from '../../services/nuovi.arrivi.service';
 import { Prodotto } from '../../models/prodotto';
 
 @Component({
@@ -11,10 +10,10 @@ import { Prodotto } from '../../models/prodotto';
 export class NuoviArriviComponent implements OnInit {
   nuoviArriviList: Prodotto[] = [];
 
-  constructor(private nuoviArriviService: NuoviArriviService) {}
+  constructor() {}
   ngOnInit(): void {
-    this.nuoviArriviService.getAllNuoviArrivi().subscribe((nuoviArrivi) => {
+    /*this.nuoviArriviService.getAllNuoviArrivi().subscribe((nuoviArrivi) => {
       console.log(nuoviArrivi);
-    });
+    });*/
   }
 }
