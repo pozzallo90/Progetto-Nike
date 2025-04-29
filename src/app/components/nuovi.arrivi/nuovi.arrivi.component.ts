@@ -12,10 +12,21 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 export class NuoviArriviComponent implements OnInit {
   nuoviArriviList: Prodotto[] = [];
 
-  constructor(private nuoviArriviService:NuoviArriviService) {}
+  constructor(private nuoviArriviService: NuoviArriviService) {}
   ngOnInit(): void {
     this.nuoviArriviService.getAllNuoviArrivi().subscribe((nuoviArrivi) => {
-      console.log(nuoviArrivi);
+      // console.log(nuoviArrivi);
+      this.nuoviArriviList.push(...nuoviArrivi);
+
+      const indexCercato = 4;
+      const index = this.nuoviArriviList.findIndex(
+        (prodotto: Prodotto) => prodotto.id === indexCercato
+      );
+      const prodottoCercato = this.nuoviArriviList.find(
+        (prodotto: Prodotto) => prodotto.id === indexCercato
+      );
+      console.log(index);
+      console.log(prodottoCercato);
     });
   }
 }
