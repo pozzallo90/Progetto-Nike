@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Prodotto } from '../../models/prodotto';
 import { NuoviArriviService } from '../../services/nuovi.arrivi.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nuovi-arrivi',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './nuovi.arrivi.component.html',
   styleUrl: './nuovi.arrivi.component.css',
 })
