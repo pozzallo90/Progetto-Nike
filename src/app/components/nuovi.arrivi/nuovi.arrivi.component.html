@@ -1,86 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container" *ngIf="nuoviArriviList">
-      <div class="card">
-        <ul
-          class="list-group list-group-flush"
-          *ngFor="let nuovoArrivo of nuoviArriviList"
-        >
-          <div class="row align-items-center">
-            <div class="col-3">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/csnnsvmzomr1gu7qfcnd/W+AIR+MAX+270.png"
-                class="card-img-top"
-                alt="scarpa nike "
-              />
-              <li class="list-group-item">Nome : {{ nuovoArrivo.nome }}</li>
-              <li class="list-group-item">
-                Categoria :{{ nuovoArrivo.categoria }}
-              </li>
-              <li class="list-group-item">Prezzo : {{ nuovoArrivo.prezzo }}</li>
-              <li class="list-group-item">
-                Taglie :{{ nuovoArrivo.taglie_disponibili }}
-              </li>
-              <li class="list-group-item">
-                Colore : {{ nuovoArrivo.colori_disponibili }}
-              </li>
-              <li class="list-group-item">
-                Descrizione : {{ nuovoArrivo.descrizione }}
-              </li>
-            </div>
+<div *ngIf="nuoviArriviList">
+  <div
+    class="container"
+    
+  >
+    <div class="row"
+    >
+      <div class="col-md-3" *ngFor="let nuovoArrivo of nuoviArriviList" >
+        <img
+        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/csnnsvmzomr1gu7qfcnd/W+AIR+MAX+270.png"
+        class="card-img-top"
+        alt="scarpa nike "
+        width="50%"
+      />
+        <label for="nome" class="form-label">Nome : {{ nuovoArrivo.nome }}</label>
+        <label for="nome" class="form-label"> Prezzo : {{ nuovoArrivo.prezzo }}</label>
 
-            <div class="col">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/csnnsvmzomr1gu7qfcnd/W+AIR+MAX+270.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <li class="list-group-item">Nome : {{ nuovoArrivo.nome }}</li>
-              <li class="list-group-item">
-                Categoria :{{ nuovoArrivo.categoria }}
-              </li>
-              <li class="list-group-item">Prezzo : {{ nuovoArrivo.prezzo }}</li>
-              <li class="list-group-item">
-                Taglie :{{ nuovoArrivo.taglie_disponibili }}
-              </li>
-              <li class="list-group-item">
-                Colore : {{ nuovoArrivo.colori_disponibili }}
-              </li>
-              <li class="list-group-item">
-                Descrizione : {{ nuovoArrivo.descrizione }}
-              </li>
-            </div>
+      
 
-            <div class="col-3">
-              <img
-                src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/csnnsvmzomr1gu7qfcnd/W+AIR+MAX+270.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <li class="list-group-item">Nome : {{ nuovoArrivo.nome }}</li>
-              <li class="list-group-item">
-                Categoria :{{ nuovoArrivo.categoria }}
-              </li>
-              <li class="list-group-item">Prezzo : {{ nuovoArrivo.prezzo }}</li>
-              <li class="list-group-item">
-                Taglie :{{ nuovoArrivo.taglie_disponibili }}
-              </li>
-              <li class="list-group-item">
-                Colore : {{ nuovoArrivo.colori_disponibili }}
-              </li>
-              <li class="list-group-item">
-                Descrizione : {{ nuovoArrivo.descrizione }}
-              </li>
-            </div>
-          </div>
-        </ul>
+    
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
