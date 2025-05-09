@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Prodotto } from '../../models/prodotto';
-import { NuoviArriviService } from '../../services/nuovi.arrivi.service';
+
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { NuoviArriviService } from '../../services/nuovi-arrivi/nuovi.arrivi.service';
 
 @Component({
   selector: 'app-nuovi-arrivi',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './nuovi.arrivi.component.html',
   styleUrl: './nuovi.arrivi.component.css',
 })

@@ -1,23 +1,24 @@
 <div *ngIf="nuoviArriviList">
-  <div
-    class="container"
-    
-  >
-    <div class="row"
-    >
-      <div class="col-md-3" *ngFor="let nuovoArrivo of nuoviArriviList" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let nuovoArrivo of nuoviArriviList">
         <img
-        src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/csnnsvmzomr1gu7qfcnd/W+AIR+MAX+270.png"
-        class="card-img-top"
-        alt="scarpa nike "
-        width="50%"
-      />
-        <label for="nome" class="form-label">Nome : {{ nuovoArrivo.nome }}</label>
-        <label for="nome" class="form-label"> Prezzo : {{ nuovoArrivo.prezzo }}</label>
-
-      
-
-    
+          [src]="nuovoArrivo.immagine"
+          class="card-img-top"
+          alt="scarpa nike "
+          width="50%"
+        />
+        <p>
+          <a [routerLink]="['/dettaglio-prodotto', nuovoArrivo.id]">
+            Dettaglio Prodotto</a
+          >
+        </p>
+        <label for="nome" class="form-label"
+          >Nome : {{ nuovoArrivo.nome }}</label
+        >
+        <label for="prezzo" class="form-label">
+          Prezzo : {{ nuovoArrivo.prezzo }}</label
+        >
       </div>
     </div>
   </div>

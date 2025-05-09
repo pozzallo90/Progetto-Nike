@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { NuoviArriviService } from './nuovi.arrivi.service';
 
 describe('NuoviArriviService', () => {
